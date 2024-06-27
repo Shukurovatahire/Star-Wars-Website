@@ -1,0 +1,78 @@
+.planetsCard {
+    display: flex;
+    width: 250px;
+    height: 500px;
+    border-radius: 15px;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+  
+    .planetsCardImg {
+      position: relative;
+    }
+    .planetsCardImg img {
+      width: 250px;
+      height: 300px;
+    }
+  
+    .planetsCardContent {
+      height: 200px;
+      padding-left: 1rem;
+      margin-top: -4px;
+      color: white;
+      display: flex;
+      gap: 1rem;
+      flex-direction: column;
+      background-color: rgb(29, 30, 31);
+  
+      .planets-line-with-gap {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        width: 100%;
+        margin-top: 16px;
+  
+        .planetsLongLine {
+          display: inline-block;
+          width: 24px;
+          height: 3px;
+          background-color: white;
+          transition: all 0.3s ease-in-out;
+          border-radius: 2px;
+        }
+  
+        .planetsShortLine {
+          display: inline-block;
+          width: 3px;
+          height: 3px;
+          background-color: white;
+          transition: all 0.3s ease-in-out;
+          border-radius: 2px;
+        }
+      }
+  
+      .planetsParallelogram {
+        width: 120px;
+        height: 15px;
+        background-color: black;
+        clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+        position: relative;
+        left: 40%;
+        top: 36px;
+      }
+    }
+  }
+  
+  .props {
+    height: 100px;
+  }
+  
+  .planetsCard:hover .planetsLongLine,
+  .planetsCard:hover .planetsShortLine {
+    background-color: white;
+    color: white;
+    filter: drop-shadow(white 0px 0px 10px) brightness(1.5);
+  }
+  

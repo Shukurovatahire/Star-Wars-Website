@@ -1,0 +1,107 @@
+.section2 {
+  width: 100%;
+  height: 600px;
+  background-position: center;
+  background-size: cover;
+  background-image: url(https://lumiere-a.akamaihd.net/v1/images/104-acolyte-container-hero-desktop_fc570bdb.jpeg?region=0,0,2048,878);
+}
+.hr {
+  border: none;
+  border-top: 0.01px solid #48494a;
+}
+.section2 img {
+  width: 400px;
+  height: 155px;
+}
+.trailerContainer {
+  padding-left: 3rem;
+  width: 500px;
+  flex-direction: column;
+  height: 100%;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+.trailerContainer p {
+  color: white;
+  font-size: 25px;
+  text-align: center;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 1rem;
+}
+.sectionCards {
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  background-color: black;
+}
+.cardContainer {
+  width: 1380px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+.cardParagraf {
+  color: white;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  font-size: 25px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #48494a;
+}
+
+.gridBox {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 2rem;
+}
+.sectionSocialCrads {
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  background-color: black;
+}
+
+.socialCradsContainer {
+  width: 1380px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+.socialGridBox,.peopleGridBox {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  row-gap: 2rem;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  width: 55%;
+  height: 400px;
+  padding: 20px;
+  font-size: 17px;
+  background-color: white;
+  color: white;
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  background-image: url(https://lumiere-a.akamaihd.net/v1/images/tpm-theatres-spheres-hero-desktop_d3aefa27.jpeg?region=0,0,2048,878);
+}
+
+.modal span {
+  width: 100%;
+  display: block;
+  text-align: end;
+  font-size: 30px;
+}
+.modal p{
+  margin-bottom: 5px;
+}

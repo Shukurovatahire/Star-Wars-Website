@@ -1,0 +1,96 @@
+.longLine2 {
+    display: inline-block;
+    height: 1px;
+    width: 24px;
+    height: 3px;
+    background-color:#48494a;
+    transition: all 0.3s ease-in-out;
+    border-radius: 2px;
+  }
+  
+  .shortLine2 {
+    display: inline-block;
+    height: 1px;
+    height: 3px;
+    width: 3px;
+    background-color: #48494a;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  
+  .line-with-gap2 {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    width: 100%;
+    margin-top: 16px;
+  }
+  .parallelogram2 {
+    width: 120px;
+    height: 15px;
+    background-color:black;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+    position: relative;
+    left: 40%;
+    top: 10px;
+  }
+  
+  .card2 {
+    display: flex;
+    width: 250px;
+    height: 445px;
+    border-radius: 15px;
+    overflow: hidden; 
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+  }
+  .cardContent2 {
+    height: 125px;
+    padding-left: 1rem; 
+    margin-top: -4px;
+    color: white;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    background-color: rgb(29, 30, 31);
+  }
+  .cardImg2 img {
+    width: 250px;
+    height: 320px;
+  }
+
+  .cardImg2 {
+    position: relative;
+  }
+  .cardImg2::after {
+    content: '\25B6';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 40px;
+      height: 40px;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 50%;
+      transition: all 0.3s ease-in-out;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  
+  .card2:hover .longLine2,
+  .card2:hover .shortLine2 {
+    background-color: white;
+    filter: drop-shadow(white 0px 0px 10px) brightness(1.5);
+   
+  }
+  .cardContent2 h3{
+    height: 50px;
+  }
+  a{
+    text-decoration: none;
+  }

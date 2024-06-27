@@ -1,0 +1,77 @@
+.filmCard {
+    display: flex;
+    width: 250px;
+    height: 445px;
+    border-radius: 15px;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+  
+    .filmCardImg {
+      position: relative;
+    }
+    .filmCardImg img {
+      width: 250px;
+      height: 320px;
+    }
+  
+    .filmCardContent {
+      height: 125px;
+      padding-left: 1rem;
+      margin-top: -4px;
+      color: white;
+      display: flex;
+      gap: 1rem;
+      flex-direction: column;
+      background-color: rgb(29, 30, 31);
+  
+      .film-line-with-gap {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        width: 100%;
+        margin-top: 16px;
+  
+        .filmLongLine {
+          display: inline-block;
+          width: 24px;
+          height: 3px;
+          background-color: white;
+          transition: all 0.3s ease-in-out;
+          border-radius: 2px;
+        }
+  
+        .filmShortLine {
+          display: inline-block;
+          width: 3px;
+          height: 3px;
+          background-color: white;
+          transition: all 0.3s ease-in-out;
+          border-radius: 2px;
+        }
+      }
+  
+      .filmParallelogram {
+        width: 120px;
+        height: 15px;
+        background-color: black;
+        clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+        position: relative;
+        left: 40%;
+        top: 10px;
+      }
+    }
+  }
+  
+  h3 {
+    height: 50px;
+  }
+  
+  .filmCard:hover .filmLongLine,
+  .filmCard:hover .filmShortLine {
+    background-color: white;
+    color: white;
+    filter: drop-shadow(white 0px 0px 10px) brightness(1.5);
+  }

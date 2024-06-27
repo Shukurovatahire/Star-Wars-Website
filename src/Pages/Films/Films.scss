@@ -1,0 +1,58 @@
+.sectionFilms {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+
+  .filmsContainer {
+    width: 1380px;
+    margin: 0 auto;
+    padding: 0;
+
+    .filmsParagraf {
+      color: white;
+      margin-bottom: 2rem;
+      font-weight: bold;
+      font-size: 25px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #48494a;
+    }
+
+    .filmGridBox {
+      display: grid;
+      justify-content: center;
+      gap: 20px;
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+}
+
+.ticket {
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  background-color: black;
+
+  .ticketContainer {
+    width: 1380px;
+    height: 600px;
+    margin: 0 auto;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    background-image: url(https://lumiere-a.akamaihd.net/v1/images/tpm-theatres-spheres-hero-desktop_d3aefa27.jpeg?region=0,0,2048,878);
+
+    .ticketContent {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: white;
+      gap: 1rem ;
+      width: 500px;
+      height: 600px;
+      margin-left: 5rem;
+    }
+    .ticketContent  h2{
+        font-size: 40px;
+    }
+  }
+}

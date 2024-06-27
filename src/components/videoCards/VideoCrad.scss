@@ -1,0 +1,70 @@
+.longLine {
+  display: inline-block;
+  height: 1px;
+  width: 24px;
+  height: 3px;
+  background-color:#48494a;
+  transition: all 0.3s ease-in-out;
+  border-radius: 2px;
+}
+
+.shortLine {
+  display: inline-block;
+  height: 1px;
+  height: 3px;
+  width: 3px;
+  background-color: #48494a;
+  transition: all 0.3s ease-in-out;
+  border-radius: 2px;
+}
+
+
+.line-with-gap {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+  margin-top: 16px;
+}
+.parallelogram {
+  width: 120px;
+  height: 15px;
+  background-color: black;
+  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+  position: relative;
+  left: 65%;
+  top: 2px;
+}
+
+.card {
+  display: flex;
+  width: 430px;
+  height: 352px;
+  border-radius: 15px;
+  overflow: hidden; 
+  border: 1px solid black;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+.cardContent {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-top: -4px;
+  color: white;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  background-color: rgb(29, 30, 31);
+}
+.cardImg img {
+  width: 430px;
+  height: 240px;
+}
+
+.card:hover .longLine,
+.card:hover .shortLine {
+  background-color: white;
+  filter: drop-shadow(white 0px 0px 10px) brightness(1.5);
+ 
+}
