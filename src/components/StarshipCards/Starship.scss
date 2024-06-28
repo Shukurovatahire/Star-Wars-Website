@@ -1,0 +1,78 @@
+.starshipCard {
+    display: flex;
+    width: 250px;
+    height: 500px;
+    border-radius: 15px;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+  
+    .starshipCardImg {
+      position: relative;
+    }
+    .starshipCardImg img {
+      width: 250px;
+      height: 300px;
+    }
+  
+    .starshipCardContent {
+      height: 200px;
+      padding-left: 1rem;
+      margin-top: -4px;
+      color: white;
+      display: flex;
+      gap: 1rem;
+      flex-direction: column;
+      background-color: rgb(29, 30, 31);
+  
+      .starship-line-with-gap {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        width: 100%;
+        margin-top: 16px;
+  
+        .starshipLongLine {
+          display: inline-block;
+          width: 24px;
+          height: 3px;
+          background-color: white;
+          transition: all 0.3s ease-in-out;
+          border-radius: 2px;
+        }
+  
+        .starshipShortLine {
+          display: inline-block;
+          width: 3px;
+          height: 3px;
+          background-color: white;
+          transition: all 0.3s ease-in-out;
+          border-radius: 2px;
+        }
+      }
+  
+      .starshipParallelogram {
+        width: 120px;
+        height: 15px;
+        background-color: black;
+        clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+        position: relative;
+        left: 40%;
+        top: 36px;
+      }
+    }
+  }
+  
+  .props {
+    height: 100px;
+  }
+  
+  .starshipCard:hover .starshipLongLine,
+  .starshipCard:hover .starshipShortLine {
+    background-color: white;
+    color: white;
+    filter: drop-shadow(white 0px 0px 10px) brightness(1.5);
+  }
+  

@@ -18,6 +18,8 @@ interface IPeople {
 const People: React.FC = () => {
   const [peopleData, setPeopleData] = useState<IPeople[]>([]);
   const [nextPage, setNextPage] = useState<string | null>(null);
+  const [loading, setLoading] = useState<boolean>(false);
+  const [saerchPeople,setSearchPeople]=useState<string>("")
   const imagesUrl = [
     "https://lumiere-a.akamaihd.net/v1/images/screen_shot_2015-07-24_at_1_84da9ffb.jpeg?region=0%2C0%2C1280%2C915",
     "https://media.gettyimages.com/id/1252646140/photo/c-3po-at-the-star-ceremony-where-carrie-fisher-is-honored-with-a-star-on-the-hollywood-walk.jpg?s=612x612&w=0&k=20&c=pK9BUM64qM3gNeX279ZUwHeJNWir62Is_pjQYZ6r99g=",
@@ -38,6 +40,7 @@ const People: React.FC = () => {
       setPeopleData([...peopleData, ...data.results]);
       setNextPage(data.next);
     }
+    setLoading(false)
   };
 
   useEffect(() => {
@@ -46,21 +49,30 @@ const People: React.FC = () => {
   }, []);
 
   const loadMorePeople = () => {
-    if (nextPage) {
+    if (nextPage&&!loading) {
       getPeople(nextPage);
     }
   };
 
+  const handleSearch = (term: string | null) => {
+    setSearchPeople(term || ""); 
+  };
+  const filteredPeople = peopleData.filter((person)=>
+  person.name.toLowerCase().includes(saerchPeople.toLowerCase()))
+
   return (
     <>
-      <Header />
+      <Header onSearch={handleSearch} />
 
       <section className="people">
         <div className="peopleContainer">
           <p className="pepopleParagraf">Star Wars Caracters</p>
 
           <div className="peopleGridBox">
-            {peopleData.map((people: any, index: number) => (
+            
+              {saerchPeople ==="" ? (
+
+                peopleData.map((people: any, index: number) => (
               <div key={index}>
                 <PeopleCard
                   url={imagesUrl[index % imagesUrl.length]}
@@ -73,13 +85,31 @@ const People: React.FC = () => {
                   birth_year={people.birth_year}
                 />
               </div>
-            ))}
+            ))
+              ) : (
+                filteredPeople.map((person: IPeople, index: number) => (
+                  <div key={index}>
+                    <PeopleCard
+                      url={imagesUrl[index % imagesUrl.length]}
+                      name={person.name}
+                      height={person.height}
+                      mass={person.mass}
+                      eye_color={person.eye_color}
+                      skin_color={person.skin_color}
+                      gender={person.gender}
+                      birth_year={person.birth_year}
+                    />
+                  </div>
+                ))
+              )}
+
+            
           </div>
 
           {nextPage && (
             <div className="load">
-              <button className="loadMoreButton" onClick={loadMorePeople}>
-                Load more
+              <button className="loadMoreButton" onClick={loadMorePeople} disabled={loading}>
+                {loading ? "Loading...": "Load more"}
               </button>
             </div>
           )}

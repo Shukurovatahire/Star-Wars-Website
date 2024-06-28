@@ -17,6 +17,11 @@ const Films: React.FC = () => {
   const [filmData, setFilmData] = useState<IFilm[]>([]);
   const [selectedFilm, setSelectedFilm] = useState<IFilm | null>(null);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+  const [searchTerm, setSearchTerm] = useState<string>("");
+
+  const searchFilms = (term: string) => {
+    setSearchTerm(term);
+  };
 
   const imageUrl = [
     " https://lumiere-a.akamaihd.net/v1/images/Star-Wars-New-Hope-IV-Poster_c217085b.jpeg",
@@ -39,6 +44,7 @@ const Films: React.FC = () => {
     getFilmData();
   }, []);
 
+
   const openModal = (film: IFilm) => {
     console.log(123);
     setSelectedFilm(film);
@@ -48,6 +54,7 @@ const Films: React.FC = () => {
   const closeModal = () => {
     setIsModalOpen(false);
   };
+
 
   return (
     <>
